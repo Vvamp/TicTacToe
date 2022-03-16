@@ -1,0 +1,106 @@
+body {
+  background-color: hsl(240, 3%, 7%);
+  margin: 0;
+  padding: 1em;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --gridCellSize: 8rem;
+}
+button {
+  transition: background-color 200ms ease-in-out;
+}
+
+h2,
+h3 {
+  margin: auto;
+  width: 20vw;
+  text-align: center;
+  padding: 2rem;
+}
+
+h2.game-name {
+  font-size: 3vw;
+  margin-bottom: 5vw;
+}
+
+.gameplay-selector {
+  margin: auto;
+  width: 40vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gameplay-select {
+  background-color: hsl(
+    var(--hue, 200),
+    var(--saturation, 1%),
+    calc(var(--lightness-offset, 0%) + var(--lightness, 23%))
+  );
+  border: 0;
+  border-radius: 0.25rem;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.gameplay-select:hover,
+.gameplay-select:focus {
+  --lightness-offset: 10%;
+}
+
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, var(--gridCellSize)));
+  grid-template-rows: repeat(3, minmax(auto, var(--gridCellSize)));
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cell {
+  background-color: hsl(
+    var(--hue, 200),
+    var(--saturation, 1%),
+    calc(var(--lightness-offset, 0%) + var(--lightness, 23%))
+  );
+  border: 0;
+  color: white;
+  fill: white;
+  font-size: 5rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.cell:hover,
+.cell:focus {
+  --lightness-offset: 10%;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.level-scoreboard {
+  height: 5vh;
+  width: 20vw;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, calc(var(--gridCellSize) / 2)));
+  position: absolute;
+  right: 10%;
+  top: 35%;
+  margin-top: -2.5vh;
+  text-align: center;
+
+  /* background-color: hsl(240, 4%, 22%); */
+}
+
+.level-scoreboard > .level-scoreboard-title {
+  grid-column: 1 / span 2;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <h2 class="game-name">Tic Tac Toe</h2>
+    <div class="gameplay-selector">
+        <button class="gameplay-select" data-selectortype="duo">2 Player Mode</button>
+        <button class="gameplay-select" data-selectortype="solo">Battle Against AI</button>
+    </div>
+    <div class="game-wrapper hide">
+        <div class="level-grid" data-gametype="solo">
+            <button class="cell"></button>
+            <button class="cell"></button>
+            <button class="cell"></button>
+            <button class="cell"></button>
+            <button class="cell"></button>
+            <button class="cell"></button>
+            <button class="cell"></button>
+            <button class="cell"></button>
+            <button class="cell"></button>
+        </div>
+
+        <div class="level-scoreboard">
+            <h2 class="level-scoreboard-title">Scoreboard</h2>
+            <span>X: </span>
+            <span data-scoreboard-label="X">0</span>
+            <span>O:</span>
+            <span data-scoreboard-label="O">0</span>
+            <span>Ties:</span>
+            <span data-scoreboard-label="Ties">0</span>
+        </div>
+
+
+
+        <h3 class="level-result"></h3>
+    </div>
+</body>
+
+</html>
